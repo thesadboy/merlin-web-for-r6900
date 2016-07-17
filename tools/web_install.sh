@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "[NOTICE] Clear old files..."
+rm -rf /jffs/merlin-web
 rm -rf /tmp/merlin-web*
 echo "[NOTICE] Download zip file..."
 wget https://github.com/thesadboy/merlin-web-for-r6900/raw/master/tools/merlin-web.zip -P /tmp/ --no-check-certificate

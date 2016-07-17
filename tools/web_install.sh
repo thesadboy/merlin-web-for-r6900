@@ -22,4 +22,4 @@ else
   echo "mount --bind /jffs/merlin-web /www  #mount modified web files" >> /jffs/scripts/init-start
 fi
 echo "[NOTICE] Restart router..."
-restart
+reboot

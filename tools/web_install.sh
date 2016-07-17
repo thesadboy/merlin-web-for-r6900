@@ -13,8 +13,8 @@ then
   echo "create /jffs/scripts/init-start and add startup cmd"
   echo "!/bin/sh" >> /jffs/scripts/init-start
   echo "mount --bind /jffs/merlin-web /www" >> /jffs/scripts/init-start
+  chmod 777 /jffs/scripts/init-start
 else
   echo "add startup cmd into /jffs/scripts/init-start"
   echo "mount --bind /jffs/merlin-web /www" >> /jffs/scripts/init-start
-  chmod 777 /jffs/scripts/init-start
 fi

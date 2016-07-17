@@ -1,4 +1,5 @@
 #!/bin/sh
+#script by Nick/thesadboy
 echo "[NOTICE] Clear old files..."
 rm -rf /jffs/merlin-web
 rm -rf /tmp/merlin-web*
@@ -13,12 +14,12 @@ cp -r /tmp/merlin-web/* /jffs/merlin-web
 if [ ! -f "/jffs/scripts/init-start" ]
 then
   echo "[NOTICE] Create /jffs/scripts/init-start and add startup cmd"
-  echo "!/bin/sh" >> /jffs/scripts/init-start
-  echo "mount --bind /jffs/merlin-web /www" >> /jffs/scripts/init-start
+  echo "#!/bin/sh" >> /jffs/scripts/init-start
+  echo "mount --bind /jffs/merlin-web /www  #mount modified web files" >> /jffs/scripts/init-start
   chmod 777 /jffs/scripts/init-start
 else
   echo "[NOTICE] Add startup cmd into /jffs/scripts/init-start"
-  echo "mount --bind /jffs/merlin-web /www" >> /jffs/scripts/init-start
+  echo "mount --bind /jffs/merlin-web /www  #mount modified web files" >> /jffs/scripts/init-start
 fi
 echo "[NOTICE] Restart router..."
 restart
